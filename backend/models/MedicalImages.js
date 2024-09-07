@@ -10,5 +10,6 @@ const ImageSchema = new Schema({
     collection: "medical-images",
 });
 
-export default mongoose.model("MedicalImage", ImageSchema);
+const MedicalImage = mongoose.model("MedicalImages", ImageSchema);
+export default MedicalImage
 

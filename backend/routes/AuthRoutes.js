@@ -13,10 +13,10 @@ const secret = process.env.SECRET
 
 router.post('/signup', async (req, res) => {
     try {
-        const { email, password } = req.body
+        const { email, password, name } = req.body
 
-        if (!email || !password) {
-            return res.status(400).json({ error: 'Enter both fields' })
+        if (!email || !password || !name) {
+            return res.status(400).json({ error: 'Enter all fields' })
         }
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -31,7 +31,7 @@ router.post('/signup', async (req, res) => {
             return res.status(400).json({ error: 'Email already exists' });
         }
 
-        const newUser = await User.create({ email: email, password: bycrypt.hashSync(password, salt) })
+        const newUser = await User.create({ email: email, password: bycrypt.hashSync(password, salt), name: name })
 
         res.json(newUser)
     } catch (error) {
@@ -69,11 +69,6 @@ router.post('/login', async (req, res) => {
         res.status(500).json(error)
     }
 })
-
-
-
-
-
 
 export default router;
 
