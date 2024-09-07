@@ -1,15 +1,14 @@
 .navbar{
-    padding: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    position: relative;
-    /* border: 1px solid; */
+    padding: 20px 0;
+    background-color: #99C2A2;
 }
 
 .logo {
     width: 250px;
-    color: #99C2A2;
+    color: black;
     font-size: 1.5rem;
 }
 
@@ -19,9 +18,12 @@
     font-size: 18px;
     list-style: none;
     gap: 20px;
-    color: #7A918D;
+    color: black;
 }
-
+.navigation {
+    color: black;
+    text-decoration: none;
+}
 .navbar-right {
     display: flex;
     align-items: center;
@@ -31,8 +33,8 @@
 .signIn {
     background: transparent;
     font-size: 16px;
-    color: #7A918D;
-    border: 1px solid #7A918D;
+    color: black;
+    border: 1px solid black;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;

@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <>
             <div className={styles.footer}>
-                <p className={styles.footerText}>All right reserves by Rumi Institute</p>
+                <p className={styles.footerText}>All right reserves by Medical Mind</p>
             </div>
         </>
     )
