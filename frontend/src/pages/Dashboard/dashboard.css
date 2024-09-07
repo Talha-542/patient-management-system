@@ -1,0 +1,50 @@
+.dashboard-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .dashboard-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .add-patient-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+  }
+  .add-patient-button:hover {
+    background-color: #45A049;
+  }
+  .patient-list {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+  }
+  .patient-item {
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  .patient-item h3 {
+    font-size: 20px;
+    color: #333;
+  }
+  .patient-item p {
+    font-size: 16px;
+    color: #777;
+  }
