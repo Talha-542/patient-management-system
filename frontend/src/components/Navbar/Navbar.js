@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faSearch, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-// import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -15,24 +15,30 @@ export default function Navbar() {
         <div className={styles.navbar}>
             <h1 className={styles.logo}>Medical Mind</h1>
             <ul className={styles.navbarMenu}>
+                <Link to='/' className={styles.navigation}>
                 <li
                     className={menu === 'home' ? 'active' : ''}
                     onClick={() => handleMenuClick('home')}
                 >
                     Home
                 </li>
+                </Link>
+                <Link to='/about-us' className={styles.navigation}>
                 <li
                     className={menu === 'about us' ? 'active' : ''}
                     onClick={() => handleMenuClick('about us')}
                 >
                     About Us
                 </li>
+                </Link>
+                <Link to='/contact-us' className={styles.navigation}>
                 <li
                     className={menu === 'contact Us' ? 'active' : ''}
                     onClick={() => handleMenuClick('contact Us')}
                 >
                     Contact Us
                 </li>
+                </Link>
             </ul>
             <div className="navbar-right">
 
