@@ -78,7 +78,7 @@ router.post('/add-medical-image', upload.single('image'), async (req, res) => {
             const { _id, title } = req.body
     
             const result = await cloudinary.uploader.upload(req.file.path, {
-                folder: 'express-cloudinary',
+                folder: 'devathon',
                 width: 500,
                 height: 500,
                 crop: 'fill'
