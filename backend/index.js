@@ -2,9 +2,9 @@ import express from 'express';
 import dotenv from 'dotenv'
 import mongoose from 'mongoose';
 import cors from 'cors';
-import AdminRoutes from './routes/AdminRoutes'
-import DoctorRoutes from './routes/DoctorRoutes'
-import AuthRoutes from './routes/AuthRoutes'
+import AdminRoutes from './routes/AdminRoutes.js'
+import DoctorRoutes from './routes/DoctorRoutes.js'
+import AuthRoutes from './routes/AuthRoutes.js'
 
 dotenv.config();
 

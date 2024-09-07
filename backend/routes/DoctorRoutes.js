@@ -1,10 +1,11 @@
 import express from 'express';
-import User from '../models/User';
+import User from '../models/User.js';
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv';
-import DoctorPatientRel from '../models/DoctorPatientRel';
-import MedicalImage from '../models/MedicalImages';
-import upload from '../middleware/multer';
+import DoctorPatientRel from '../models/DoctorPatientRel.js';
+import MedicalImage from '../models/MedicalImages.js';
+import upload from '../middleware/multer.js';
+import cloudinary from '../utils/cloudinary.js';
 
 dotenv.config()
 

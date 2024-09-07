@@ -1,5 +1,5 @@
 import express from 'express';
-import User from '../models/User';
+import User from '../models/User.js';
 import dotenv from 'dotenv'
 import bycrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
