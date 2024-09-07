@@ -38,7 +38,7 @@ export default function Footer() {
       </div>
       <hr />
       <p className={styles.footerCopyright}> 
-        Copyright 2024 @ Food inc.com - All Right Reserved 
+        Copyright 2024 @ Medical Mind.com - All Right Reserved 
       </p>
     </div>
   );

@@ -39,6 +39,7 @@ export default function Navbar() {
                     Contact Us
                 </li>
                 </Link>
+                
             </ul>
             <div className="navbar-right">
 
@@ -49,6 +50,10 @@ export default function Navbar() {
                     </Link> */}
                 {/* <div className="dot"></div> */}
                 {/* </div> */}
+                <Link to='/dashboard' className={styles.navigation}>
+            
+                Dashboard
+                </Link>
                 <Link to='/sign-in' className={styles.signIn} onClick={() => console.log('Sign In Clicked')}>Sign In</Link>
                 {/* <button  className={styles.signIn} onClick={() => console.log('Sign In Clicked')}>Sign In</button> */}
             </div>
