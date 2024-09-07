@@ -1,0 +1,23 @@
+.counter {
+    background-color: #99C2A2;
+    display: flex;
+    align-items: center;
+    height: 15vh;
+}
+.counters {
+    display: flex;
+    width: 100%;
+}
+.staff,
+.doctors,
+.yearsOfExperience,
+.patientsRegistered {
+    width: 100%;
+    text-align: center;
+}
+.number {
+    font-size: 50px;
+}
+.content {
+    font-size: 18px;
+}
