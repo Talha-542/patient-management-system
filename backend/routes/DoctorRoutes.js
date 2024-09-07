@@ -84,7 +84,7 @@ router.post('/add-medical-image', upload.single('image'), async (req, res) => {
                 crop: 'fill'
             })
             
-            const newImage = await MedicalImage.create({
+            await MedicalImage.create({
                 patient: _id,
                 doctor: info._id,
                 imageURL: result.secure_url,
