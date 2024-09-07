@@ -1,12 +1,13 @@
 
-import Navbar from './components/Navbar/Navbar';
+import React from 'react'
+import Home from './pages/Home/Home';
+import './App.css';
 
 export default function App() {
   return (
-<div>
-    
-      Pateint Management System
+    <>
+     <Home />
+    </>
 
-    </div>
   )
 }
