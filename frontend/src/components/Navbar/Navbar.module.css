@@ -72,61 +72,58 @@
 
 /* Media Queries */
 @media (max-width: 1050px) {
-    .navbar .logo-text {
+    .navbar .logo {
         width: 140px;
     }
-    .navbar-menu {
+    .navbarMenu {
         gap: 20px;
         font-size: 17px;
     }
     .navbar-right {
         gap: 30px;
     }
-    .navbar-right img {
-        width: 22px;
-    }
-    .navbar button {
+    
+    .signIn {
         padding: 8px 25px;
     }
 }
 
 @media (max-width: 900px) {
-    .navbar .logo-text {
+     .logo {
         width: 120px;
     }
-    .navbar-menu {
+    .navbarMenu {
         gap: 10px;
         font-size: 16px;
     }
     .navbar-right {
         gap: 20px;
     }
-    .navbar-right img {
-        width: 20px;
-    }
-    .navbar button {
+    
+    .signIn {
         padding: 7px 20px;
         font-size: 15px;
     }
 }
 
 @media (max-width: 750px) {
-    .navbar-menu {
+     .navbarMenu {
         display: none;
-    }
-    .navbar-right {
-        gap: 10px;
-    }
-    .navbar button {
+    } 
+   
+    .signIn {
         padding: 6px 18px;
         font-size: 14px;
     }  
+    
 }
 
 @media (min-width:280px) and (max-width:749px)
 {
+    .logo{
+        width:150px
+    }
    .navbar{
-
     max-width: 120%;
 
    } 

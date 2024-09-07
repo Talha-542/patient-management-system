@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import About from './pages/AboutUs/AboutUs'
 import SignIn from './pages/SignIn/SignIn';
@@ -21,6 +22,7 @@ export default function App() {
     </Routes>
      <Footer />
     </BrowserRouter>
-
   )
 }
+
+
