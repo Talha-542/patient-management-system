@@ -20,7 +20,7 @@ router.post('/select-patient', async (req, res) => {
         
         const { _id } = req.body
 
-        const newRel = await DoctorPatientRel.create({
+        await DoctorPatientRel.create({
             doctor: info._id,
             patient: _id
         })
