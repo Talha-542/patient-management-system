@@ -70,5 +70,9 @@ router.post('/login', async (req, res) => {
     }
 })
 
+router.post('/logout', (req, res) => {
+    res.cookie('token', '').json('ok')
+})
+
 export default router;
 
