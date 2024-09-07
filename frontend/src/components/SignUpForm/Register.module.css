@@ -1,0 +1,110 @@
+.loginForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84.4vh;
+  }
+  .container {
+    background-color: #b1d1b8;
+    border-radius: 20px;
+    width: 60%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+  }
+  .logo {
+    width: 50%;
+    color: black;
+  }
+  .loginImg {
+    width: 95%;
+    border-radius: 20px;
+  }
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+    height: 70%;
+    padding: 30px;
+    border-radius: 20px;
+  }
+  .login {
+    font-size: 24px;
+  }
+  .email,
+  .password {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #828282;
+    outline: #828282;
+    border-radius: 20px;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+  }
+  .email::placeholder,
+  .password::placeholder {
+    color: #abaaaa;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .email:focus,
+  .password:focus {
+    background: transparent;
+  }
+  .email {
+    margin-top: 20px;
+  }
+  .password {
+    margin: 20px 0;
+  }
+  .loginBtn {
+    background: transparent;
+    font-size: 16px;
+    color: black;
+    border: 1px solid black;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 40px;
+    text-decoration: none;
+  }
+  .Btns {
+    display: flex;
+    justify-content: space-between;
+  }
+  .signUpBtn {
+    color: black;
+    text-decoration: none;
+  }
+  .alreadyLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  @media (min-width: 320px) and (max-width: 1023px) {
+    .container {
+      flex-direction: column;
+      width: 95%;
+      height: 75%;
+      padding: 40px;
+    }
+  
+    .logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .inputs {
+      width: 100%;
+      height: 80%;
+    }
+  }
+  

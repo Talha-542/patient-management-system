@@ -49,7 +49,8 @@ export default function Navbar() {
                     </Link> */}
                 {/* <div className="dot"></div> */}
                 {/* </div> */}
-                <button className={styles.signIn} onClick={() => console.log('Sign In Clicked')}>Sign In</button>
+                <Link to='/sign-in' className={styles.signIn} onClick={() => console.log('Sign In Clicked')}>Sign In</Link>
+                {/* <button  className={styles.signIn} onClick={() => console.log('Sign In Clicked')}>Sign In</button> */}
             </div>
         </div>
     );
