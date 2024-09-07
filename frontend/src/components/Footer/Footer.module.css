@@ -9,27 +9,28 @@
   gap: 20px;
   padding: 20px 0;
   padding-top: 60px;
+  
 }
 
-.footer-content {
-  width: 90%; /* Or a specific max-width, e.g., max-width: 1200px; */
+.footerContent {
+  width: 90%; 
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 80px;
 }
 
-.footer-content-left,
-.footer-content-right,
-.footer-content-center {
+.footerContentLeft,
+.footerContentRight,
+.footerContentCenter {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: start;
 }
 
-.footer-content-left,
-.footer-content-right li,
-.footer-content-center li {
+.footerContentLeft,
+.footerContentRight li,
+.footerContentCenter li {
   list-style: none;
   margin-bottom: 10px;
 }

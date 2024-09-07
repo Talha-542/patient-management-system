@@ -4,8 +4,11 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    background-color: #99C2A2;
     /* border: 1px solid; */
-}
+    color: black;
+};
+
 
 .logo {
     width: 250px;
@@ -19,7 +22,7 @@
     font-size: 18px;
     list-style: none;
     gap: 20px;
-    color: #7A918D;
+    color: black;
 }
 
 .navbar-right {
@@ -31,7 +34,7 @@
 .signIn {
     background: transparent;
     font-size: 16px;
-    color: #7A918D;
+    color: black;
     border: 1px solid #7A918D;
     padding: 10px 30px;
     border-radius: 50px;
