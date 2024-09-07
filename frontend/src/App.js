@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import About from './pages/AboutUs/AboutUs'
 import Navbar from './components/Navbar/Navbar';
@@ -17,6 +18,7 @@ export default function App() {
     </Routes>
      <Footer />
     </BrowserRouter>
-
   )
 }
+
+
