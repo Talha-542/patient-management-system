@@ -55,14 +55,16 @@ router.get('/get-patients', async (req, res) => {
             if (err) return res.status(400).json({ error: err })
             
             const patients = await DoctorPatientRel.find({ doctor: info._id })
-                .populate('patient', 'name')
+            .populate({
+                path: 'patient',
+                select: 'name email'
+            })
     
             return res.status(200).json({patients})
         })
     } catch (error) {
         res.status(500).json({error: error})
     }
-
 })
 
 router.post('/add-medical-image', upload.single('image'), async (req, res) => {
