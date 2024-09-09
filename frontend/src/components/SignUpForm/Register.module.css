@@ -1,110 +1,135 @@
+/* Center the registration form vertically and horizontally */
 .loginForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 84.4vh;
-  }
+  display: flex;
+  flex-direction: column; /* Stack the form vertically */
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* Adjust for Navbar and Footer height */
+  background-color: #f5f5f5; /* Light background for contrast */
+  padding: 20px; /* Padding around the form */
+}
+
+/* Main container styling */
+.container {
+  background-color: #ffffff; /* White background for the container */
+  border-radius: 15px; /* Slightly rounded corners */
+  width: 50%; /* Adjust width for better fit */
+  max-width: 500px; /* Max width for larger screens */
+  padding: 20px; /* Padding inside the container */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the logo section */
+.logo {
+  margin-bottom: 20px; /* Space below the logo */
+  text-align: center;
+}
+
+/* Styling for the login image */
+.loginImg {
+  width: 100%; /* Full width for responsive design */
+  max-width: 250px; /* Max width for image */
+  border-radius: 15px; /* Rounded corners for the image */
+  object-fit: cover; /* Ensure image covers area without distortion */
+}
+
+/* Styling for the input fields section */
+.inputs {
+  width: 100%; /* Full width of the container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Space above the input fields */
+}
+
+/* Styling for the input fields */
+.email,
+.password {
+  width: 100%; /* Full width */
+  padding: 12px; /* Padding inside inputs */
+  border: 1px solid #d1d1d1; /* Light border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fafafa; /* Light background color */
+  color: #333; /* Dark text color */
+  font-size: 16px; /* Font size */
+  margin-bottom: 15px; /* Space between inputs */
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Placeholder styling */
+.email::placeholder,
+.password::placeholder {
+  color: #aaa; /* Placeholder text color */
+  font-size: 14px; /* Font size for placeholder */
+}
+
+/* Focus state styling for inputs */
+.email:focus,
+.password:focus {
+  background-color: #ffffff; /* Background color on focus */
+  border-color: #007bff; /* Border color on focus */
+  outline: none; /* Remove default focus outline */
+}
+
+.Btns {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+}
+.loginBtn {
+  background-color: #99C2A2; 
+  color: #ffffff; 
+  border: none; 
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: bold;
+  transition: background-color 0.3s ease; 
+  margin-top: 20px; 
+}
+
+.loginBtn:hover {
+  background-color:  #E4F0D7; 
+}
+
+
+.signUpBtn {
+  color: #99C2A2;
+  text-decoration: none; 
+  font-size: 14px; 
+  margin-top: 10px; 
+}
+
+.signUpBtn:hover {
+  text-decoration: underline; 
+}
+
+.signUpText {
+  display: block;
+  margin-top: 10px; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .container {
-    background-color: #b1d1b8;
-    border-radius: 20px;
-    width: 60%;
-    height: 60%;
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
+    width: 90%; /* Full width on small screens */
+    padding: 15px; /* Reduced padding */
   }
-  .logo {
-    width: 50%;
-    color: black;
-  }
+
   .loginImg {
-    width: 95%;
-    border-radius: 20px;
+    max-width: 200px; /* Smaller image on small screens */
   }
+
   .inputs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 50%;
-    height: 70%;
-    padding: 30px;
-    border-radius: 20px;
+    margin-top: 10px; /* Reduced space above inputs */
   }
-  .login {
-    font-size: 24px;
-  }
-  .email,
-  .password {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #828282;
-    outline: #828282;
-    border-radius: 20px;
-    background-color: transparent;
-    color: black;
-    font-size: 18px;
-  }
-  .email::placeholder,
-  .password::placeholder {
-    color: #abaaaa;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .email:focus,
-  .password:focus {
-    background: transparent;
-  }
-  .email {
-    margin-top: 20px;
-  }
-  .password {
-    margin: 20px 0;
-  }
+
   .loginBtn {
-    background: transparent;
-    font-size: 16px;
-    color: black;
-    border: 1px solid black;
-    padding: 10px 30px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 40px;
-    text-decoration: none;
+    width: 100%; /* Full width button on small screens */
   }
-  .Btns {
-    display: flex;
-    justify-content: space-between;
-  }
-  .signUpBtn {
-    color: black;
-    text-decoration: none;
-  }
-  .alreadyLogin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  @media (min-width: 320px) and (max-width: 1023px) {
-    .container {
-      flex-direction: column;
-      width: 95%;
-      height: 75%;
-      padding: 40px;
-    }
-  
-    .logo {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .inputs {
-      width: 100%;
-      height: 80%;
-    }
-  }
-  
+}

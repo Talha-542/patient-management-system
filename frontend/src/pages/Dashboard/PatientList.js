@@ -1,19 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './PatientList.module.css'; // Assuming CSS modules
+
 const PatientList = ({ patients }) => {
   return (
-    <div>
+    <div className={styles.patientList}>
       <h2>Patients List</h2>
-      <ul>
+      <div className={styles.cardContainer}>
         {patients.map((patient) => (
-          <li key={patient.id}>
-            <Link to={`/patient/${patient.id}`}>
-              {patient.name} - {patient.age} years old - {patient.diagnosis}
+          <div className={styles.patientCard} key={patient.id}>
+            <h3>{patient.name}</h3>
+            <p>Age: {patient.age}</p>
+            <p>Diagnosis: {patient.diagnosis}</p>
+            <Link to={`/patient/${patient.id}`} className={styles.detailsLink}>
+              View Details
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
+
 export default PatientList;

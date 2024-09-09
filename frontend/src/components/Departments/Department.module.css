@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    margin-top: 20px;
   }
   .exploreMenuList {
     display: flex;
@@ -18,26 +19,26 @@
   }
   .exploreMenuListItem {
     display: flex;
-    flex-direction: column; /* Align items vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
   .exploreMenuListItem img {
-    width: 80px; /* Fixed width for consistency */
-    height: 80px; /* Fixed height for consistency */
-    border-radius: 50%; /* Make image circular */
-    object-fit: cover; /* Ensure image covers the circle */
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    object-fit: cover; 
     cursor: pointer;
     transition: 0.3s;
+    border: 5px solid #99C2A2;
   }
-  .exploreMenuListItem img:hover {
-    transform: scale(1.05); /* Optional: slight zoom effect on hover */
-  }
+  
   .exploreMenuListItem .depName {
     color: #7A918D;
     font-weight: 500;
     margin-top: 10px;
+    cursor: pointer;
   }
   @media (max-width: 1050px) {
     .exploreMenuText {

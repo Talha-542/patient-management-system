@@ -1,41 +1,66 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Updated from useHistory to useNavigate
+import { useNavigate } from 'react-router-dom';
+import styles from './PatientForm.module.css'; 
+
 const PatientForm = ({ addPatient }) => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [diagnosis, setDiagnosis] = useState('');
-  const navigate = useNavigate(); // useNavigate instead of useHistory
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    addPatient({ id: Date.now(), name, age, diagnosis });
-    navigate('/'); // use navigate instead of history.push
+    const newPatient = {
+      id: Date.now(),
+      name,
+      age: parseInt(age),
+      diagnosis
+    };
+    addPatient(newPatient);
+    navigate('/'); 
   };
+
   return (
-    <form onSubmit={handleSubmit}>
+    <div className={styles.patientForm}>
       <h2>Add New Patient</h2>
-      <input
-        type="text"
-        value={name}
-        placeholder="Name"
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <input
-        type="number"
-        value={age}
-        placeholder="Age"
-        onChange={(e) => setAge(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        value={diagnosis}
-        placeholder="Diagnosis"
-        onChange={(e) => setDiagnosis(e.target.value)}
-        required
-      />
-      <button type="submit">Add Patient</button>
-    </form>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.formGroup}>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="age">Age:</label>
+          <input
+            type="text"
+            id="age"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="diagnosis">Diagnosis:</label>
+          <input
+            type="text"
+            id="diagnosis"
+            value={diagnosis}
+            onChange={(e) => setDiagnosis(e.target.value)}
+            required
+          />
+        </div>
+
+        <button type="submit" className={styles.submitButton}>Add Patient</button>
+      </form>
+    </div>
   );
 };
+
 export default PatientForm;

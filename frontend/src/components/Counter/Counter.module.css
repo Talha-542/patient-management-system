@@ -1,23 +1,38 @@
 .counter {
     background-color: #99C2A2;
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 15vh;
+    padding: 40px 0;
+   
+
 }
+
 .counters {
     display: flex;
-    width: 100%;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1200px;
 }
-.staff,
-.doctors,
-.yearsOfExperience,
-.patientsRegistered {
-    width: 100%;
-    text-align: center;
-}
+
+
 .number {
-    font-size: 50px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    animation: countUp 2s ease-in-out forwards;
 }
+
 .content {
-    font-size: 18px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+@keyframes countUp {
+    from {
+        content: '0';
+    }
+    to {
+        /* Final number is set by JavaScript */
+    }
 }

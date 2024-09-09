@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <Counter />
       <DepartmentMenu/>
-      <Review></Review>
+      <Counter />
+      <Review/>
     </>
   )
 }
